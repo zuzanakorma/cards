@@ -1,0 +1,135 @@
+/* basic reset*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 10px;
+}
+img {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  background-color: #5aaaa6;
+  padding: 0 1.5rem;
+}
+
+.blog-post {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 98rem;
+  padding: 5rem;
+  background-color: #fff;
+  box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 0.8rem;
+  margin: 2rem 0;
+}
+
+.blog-post-img {
+  min-width: 35rem;
+  max-width: 35rem;
+  height: 30rem;
+  transform: translateX(-8rem);
+  position: relative;
+  opacity: 0.7;
+}
+.blog-post-img:hover {
+  opacity: 1;
+}
+
+.blog-post-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.8rem;
+}
+
+.blog-post-img::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0.5rem 0.5rem 3rem 1px rgba(0, 0, 0, 0.05);
+  border-radius: 0.8rem;
+}
+
+.blog-post-date span {
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+.blog-post-title {
+  font-size: 2.5rem;
+  margin: 2rem 0 2rem;
+  text-transform: uppercase;
+  color: #00f2fe;
+}
+
+.blog-post-text {
+  margin-bottom: 3rem;
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.blog-post-cta {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #fff;
+  background-image: linear-gradient(to right, #5aaaa6 0%, #00f2fe 100%);
+  border-radius: 0.8rem;
+  text-decoration: none;
+}
+.blog-post-cta:hover {
+  background-image: linear-gradient(to left, #5aaaa6 0%, #00f2fe 100%);
+}
+
+@media screen and (max-width: 1068px) {
+  .blog-post {
+    max-width: 80rem;
+  }
+  .blog-post-img {
+    min-width: 30rem;
+    max-width: 30rem;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .blog-post {
+    max-width: 70rem;
+  }
+  .blog-post-img {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .blog-post {
+    padding: 2.5rem;
+    flex-direction: column;
+  }
+  .blog-post-img {
+    min-width: 100%;
+    max-width: 100%;
+    transform: translateX(0);
+  }
+}
